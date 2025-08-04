@@ -1,0 +1,140 @@
+/* General Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #fefefe);
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Page Fade-In Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  color: #0077cc;
+  font-size: 2rem;
+}
+
+.intro {
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Sections */
+section {
+  margin: 20px 0;
+}
+
+/* Hobbies */
+.hobbies {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-left: 0;
+}
+
+.hobbies li {
+  background-color: #d0f0fd;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Links */
+.modern-link {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.modern-link:hover {
+  text-decoration: underline;
+}
+
+/* Image Styles + Hover Effect */
+.profile-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  margin: 15px auto;
+  display: block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons + Hover Effect */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 12px 24px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #005fa3;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .hobbies {
+    flex-direction: column;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .profile-image {
+    width: 100%;
+  }
+}
